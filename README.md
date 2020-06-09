@@ -1,8 +1,8 @@
-# Docker Base project.
+## Docker Base project.
 
 This project starter kit will create a base template using on Drupal Projects
 
-# Docker images based
+## Docker images based
 1. Ubuntu: Ubuntu latest official image
 
 ## Starting the Dockerfile environment
@@ -67,6 +67,10 @@ docker volume prune
 docker network prune
 # For the brave, clean up everything:
 docker system prune
+# Check orphan docker volumes
+docker volume ls -qf dangling=true
+# Prune orphan docker volumes
+docker volume rm $(docker volume ls -qf dangling=true)
 ```
 
 # List your volumes.
