@@ -16,8 +16,6 @@ docker build -t ubuntu:v1 . --no-cache=true
 ```bash
 docker run -v /home/ec2-user/environment/base_docker/content:/var/www/html -d -p 8080:80 ubuntu:v1
 ```
-## USEFUL COMMANDS to manage our image.
-
 ## We can check if we have some dangling images we have been build time ago
 ```bash
 docker images -f dangling=true
