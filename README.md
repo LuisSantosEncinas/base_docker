@@ -1,10 +1,11 @@
 ## Docker Base project.
-
+```bash
 This project starter kit will create a base template using on Drupal Projects
-
+```
 ## Docker images based
+```bash
 1. Ubuntu: Ubuntu latest official image
-
+```
 ## Starting the Dockerfile environment
 
 ## 1. Build Docker image
@@ -77,12 +78,7 @@ docker volume rm $(docker volume ls -qf dangling=true)
 ```bash
 docker volume ls
 ```
-# Execute the volume rm command.
-```bash
-docker volume rm digit-qa-reference_mysql
-```
-
-### Make your life easier
+### Make your life easier using alias
 
 ```bash
 alias dcweb="docker-compose exec web "
