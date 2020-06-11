@@ -76,10 +76,6 @@ docker volume ls -qf dangling=true
 docker volume rm $(docker volume ls -qf dangling=true)
 ```
 
-# List your volumes.
-```bash
-docker volume ls
-```
 ### Make your life easier using alias
 
 ```bash
