@@ -16,16 +16,15 @@ docker build -t ubuntu:v1 . --no-cache=true
 ```bash
 docker run -v /home/ec2-user/environment/base_docker/content:/var/www/html -d -p 8080:80 ubuntu:v1
 ```
-## We can check if we have some dangling images we have been build time ago
+## Manage created images
 ```bash
+## List all dangling images
 docker images -f dangling=true
-```
+
 ## Delete all dangling images
-```bash
 docker images -f dangling=true -q | xargs docker rmi
-```
+
 ## Force delete all dangling images
-```bash
 docker images -f dangling=true -q | sudo xargs docker rmi -f
 ```
 ## Delete specific image by NAME
